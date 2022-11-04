@@ -70,10 +70,25 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .backdrop {
@@ -296,12 +311,20 @@ body {
 .logo {
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--accent-color);
   padding-top: 24px;
   padding-bottom: 25px;
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
 }
 
 .logo__part--dark {
@@ -313,9 +336,14 @@ body {
 }
 
 .navigation__menu {
-  margin-left: 93px;
-  display: flex;
-  align-items: center;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .navigation__menu {
+    margin-left: 93px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .menu__item .menu__link {
@@ -355,15 +383,33 @@ body {
 }
 
 .navigation__connect {
-  margin-left: auto;
-  display: flex;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .navigation__connect {
+    display: block;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .navigation__connect {
+    margin-left: auto;
+    display: flex;
+  }
 }
 
-.connect__mail {
-  margin-right: 30px;
-}
 .connect__mail:hover, .connect__mail:focus {
   color: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .connect__mail {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .connect__mail {
+    margin-right: 30px;
+  }
 }
 
 .connect__mail,
@@ -376,6 +422,15 @@ body {
   display: flex;
   align-items: center;
   transition-property: color;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .connect__mail,
+.connect__tel {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
 }
 
 .connect__icon {
@@ -402,8 +457,8 @@ body {
   background-color: var(--primary-background-color);
   padding-top: 200px;
   padding-bottom: 200px;
-  max-width: 1600px;
-  max-height: 600px;
+  max-width: 480px;
+  max-height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/herobg.img.jpg);
@@ -411,19 +466,41 @@ body {
   background-position: center;
   background-size: cover;
 }
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    max-height: 400px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    max-height: 600px;
+  }
+}
 
 .hero__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
   color: var(--white-color);
-  width: 696px;
-  height: 120px;
+  width: 360px;
+  height: 84px;
   margin: 0 auto;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    width: 696px;
+    height: 120px;
+  }
 }
 
 .hero__btn {
@@ -449,19 +526,31 @@ body {
 }
 
 .benefits {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .benefits {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .picture-list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
+  gap: 30px;
 }
 
-.picture-list__item {
-  flex-basis: calc(25% - 30px);
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .picture-list__item {
+    width: calc(50% - 30px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .picture-list__item {
+    width: calc(25% - 30px);
+  }
 }
 .picture-list__item::before {
   display: block;
@@ -510,6 +599,11 @@ body {
 .feature {
   padding-bottom: 94px;
 }
+@media screen and (min-width: 1px) and (max-width: 1199px) {
+  .feature {
+    display: none;
+  }
+}
 
 .feature-title {
   font-weight: 700;
@@ -549,8 +643,14 @@ body {
 
 .team {
   background-color: var(--text-secondary-bg-color);
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .team-title {
@@ -566,15 +666,24 @@ body {
 .team-cards {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
 
-.team-list {
+.team-item {
   background: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.team-list:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .team-item {
+    width: calc(50% - 30px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-item {
+    width: calc(25% - 30px);
+  }
 }
 
 .team-bottom {
@@ -636,8 +745,14 @@ body {
 }
 
 .customers {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .customers {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .customers-title {
@@ -652,12 +767,25 @@ body {
 
 .customers-list {
   display: flex;
-  margin-right: -30px;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
 
-.customers-item {
-  flex-basis: calc(16.6666666667% - 30px);
-  margin-right: 30px;
+@media screen and (min-width: 480px) {
+  .customers-item {
+    width: calc(50% - 30px);
+  }
+}
+@media screen and (min-width: 768px) {
+  .customers-item {
+    width: calc(33.3333333333% - 30px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .customers-item {
+    width: calc(16.6666666667% - 30px);
+  }
 }
 
 .customers-link {
@@ -688,7 +816,6 @@ body {
   background-color: var(--primary-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
-  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -710,6 +837,15 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--white-color);
+}
+
+.footer-connect {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-connect {
+    margin-bottom: 0;
+  }
 }
 
 .footer-addres {
@@ -751,17 +887,31 @@ body {
   color: var(--accent-color);
 }
 
-.footer-content {
-  display: flex;
-  align-items: baseline;
+@media screen and (min-width: 1200px) {
+  .footer-content {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .footer-first {
-  margin-right: 70px;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer-first {
+    margin-right: 70px;
+    text-align: inherit;
+  }
 }
 
 .footer-second {
-  margin-right: 93px;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer-second {
+    margin-right: 93px;
+    text-align: inherit;
+  }
 }
 
 .footer-text {
@@ -776,7 +926,14 @@ body {
 
 .footer-list {
   display: flex;
+  justify-content: center;
   gap: 10px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-list {
+    margin-bottom: 0;
+  }
 }
 
 .footer-link {
@@ -806,12 +963,24 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   color: var(--white-color);
   margin-bottom: 20px;
 }
+@media screen and (min-width: 1200px) {
+  .footer-form {
+    text-align: inherit;
+  }
+}
 
 .footer-subscription {
-  display: flex;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer-subscription {
+    display: flex;
+    text-align: inherit;
+  }
 }
 
 .footer-input {
@@ -824,6 +993,7 @@ body {
   color: var(--white-color);
   padding-left: 16px;
   margin-right: 12px;
+  margin-bottom: 20px;
 }
 .footer-input::-moz-placeholder {
   font-weight: 400;
@@ -860,10 +1030,14 @@ body {
   letter-spacing: 0.06em;
   color: var(--white-color);
   cursor: pointer;
-  display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-btn {
+    display: flex;
+  }
 }
 
 .main-contant {

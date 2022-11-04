@@ -1,5 +1,8 @@
 .feature {
     padding-bottom: 94px;
+        @media screen and (min-width: 1px) and (max-width: 1199px) {
+      display: none;
+    }
   }
   .feature-title {
     @include font(700, 36px, 1.17, 0.03em);
