@@ -54,6 +54,9 @@
       width: 696px;
       height: 120px;
   }
+  @media screen and (max-width: 480px) {
+    max-width: 294px;
+  }
 }
   
   .hero__btn {

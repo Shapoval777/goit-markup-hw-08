@@ -22,7 +22,6 @@
   }
   
   .customers-item {
-    // flex-basis: calc(100% / 6 - 30px);
     @media screen and (min-width: 480px) {
       width: calc(100% / 2 - 30px);
     }
