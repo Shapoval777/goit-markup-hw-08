@@ -439,6 +439,7 @@ body {
 @media screen and (min-width: 1200px) {
   .connect__mail {
     margin-right: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -514,6 +515,9 @@ body {
 }
 
 .menu-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
   margin-left: auto;
   background-color: transparent;
   border: none;
@@ -593,8 +597,8 @@ body {
 
 .hero {
   background-color: var(--primary-background-color);
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   max-width: 480px;
   max-height: 400px;
   margin-left: auto;
@@ -625,6 +629,8 @@ body {
   .hero {
     max-width: 1600px;
     max-height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-image: var(--hero-bg-gradient), url(../images/herobg.img.jpg);
   }
 }
@@ -655,11 +661,6 @@ body {
     letter-spacing: 0.06em;
     width: 696px;
     height: 120px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .hero__title {
-    max-width: 294px;
   }
 }
 
@@ -992,21 +993,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: baseline;
+    margin-bottom: 60px;
   }
 }
 
 .footer-first {
   text-align: center;
+  margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .footer-first {
     margin-right: 165px;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer-first {
     margin-right: 70px;
     text-align: inherit;
+    margin-bottom: 0;
   }
 }
 
@@ -1027,15 +1032,6 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--white-color);
-}
-
-.footer-connect {
-  margin-bottom: 60px;
-}
-@media screen and (min-width: 1200px) {
-  .footer-connect {
-    margin-bottom: 0;
-  }
 }
 
 .footer-addres {
@@ -1079,11 +1075,18 @@ body {
 
 .footer-second {
   text-align: center;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer-second {
+    margin-bottom: 0;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer-second {
     margin-right: 93px;
     text-align: inherit;
+    margin-bottom: 0;
   }
 }
 
@@ -1101,12 +1104,6 @@ body {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 60px;
-}
-@media screen and (min-width: 1200px) {
-  .footer-list {
-    margin-bottom: 0;
-  }
 }
 
 .footer-link {
