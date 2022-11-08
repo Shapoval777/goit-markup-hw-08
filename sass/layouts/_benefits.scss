@@ -15,11 +15,11 @@
   
   .picture-list__item {
     @media screen and (min-width: 768px) {
-      width: calc(100% / 2 - 30px);
+      flex-basis: calc((100% - 30px) / 2 );
     }
     @media screen and (min-width: 1200px) {
-      width: calc(100% / 4 - 30px);
-    }
+      flex-basis: calc((100% - 90px) / 4 );
+      }
     &::before {
       display: block;
       height: 120px;

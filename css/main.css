@@ -705,12 +705,12 @@ body {
 
 @media screen and (min-width: 768px) {
   .picture-list__item {
-    width: calc(50% - 30px);
+    flex-basis: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
   .picture-list__item {
-    width: calc(25% - 30px);
+    flex-basis: calc((100% - 90px) / 4);
   }
 }
 .picture-list__item::before {
@@ -821,7 +821,12 @@ body {
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--title-text-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .team-title {
+    margin-bottom: 50px;
+  }
 }
 
 .team-cards {
@@ -838,12 +843,12 @@ body {
 }
 @media screen and (min-width: 768px) {
   .team-item {
-    width: calc(50% - 30px);
+    flex-basis: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
   .team-item {
-    width: calc(25% - 30px);
+    flex-basis: calc((100% - 90px) / 4);
   }
 }
 
@@ -923,7 +928,12 @@ body {
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--title-text-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .customers-title {
+    margin-bottom: 50px;
+  }
 }
 
 .customers-list {
@@ -933,26 +943,29 @@ body {
   justify-content: center;
 }
 
+.customers-item {
+  height: 92px;
+}
 @media screen and (min-width: 480px) {
   .customers-item {
-    width: calc(50% - 30px);
+    flex-basis: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 768px) {
   .customers-item {
-    width: calc(33.3333333333% - 30px);
+    flex-basis: calc((100% - 60px) / 3);
   }
 }
 @media screen and (min-width: 1200px) {
   .customers-item {
-    width: calc(16.6666666667% - 30px);
+    flex-basis: calc((100% - 150px) / 6);
   }
 }
 
 .customers-link {
   display: flex;
-  height: 92px;
-  width: 170px;
+  height: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   align-items: center;
@@ -994,6 +1007,11 @@ body {
     justify-content: center;
     align-items: baseline;
     margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-tablet {
+    margin-bottom: 0;
   }
 }
 
